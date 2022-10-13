@@ -1,4 +1,4 @@
-class word
+class Word
 {
     public string RandomWord()
     {
@@ -6,5 +6,5 @@ class word
         return word;
     }
 
-    
+
 }
