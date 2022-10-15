@@ -6,4 +6,9 @@ class Player
         string guess = Console.ReadLine() ?? "";
         return guess;
     }
+
+    public int Turn(int turn)
+    {
+        return turn += 1;
+    }
 }
