@@ -2,19 +2,41 @@ class Word
 {
     public string RandomWord()
     {
-        string word = "class";
+        String[] words = new string[5] {"class", "semester", "computer", "engineering", "science"};
+        Random rnd = new Random();
+        int random = rnd.Next(1,6);
+        string word = words[random];
         return word;
     }
 
-    public Array WordArray(string word)
+    public List<char> WordList(string word)
     {
-        char[] letters = new char[word.Length];
+        List<char> letters = new List<char>();
 
         for (int i = 0; i < word.Length; i++)
         {
-            letters[i] = word[i];
+            letters.Add(word[i]);
         }
 
         return letters;
+    }
+    public void DisplayWord(List<char> guesses, List<char> Word)
+    {
+        for (int i = 0; i < Word.Count; i++)
+        {
+            bool there = false;
+            for (int j = 0; j < guesses.Count; j++)
+            {
+                if (guesses[j] == Word[i])
+                {
+                    there = true;
+                }
+            }
+            if (there)
+            {
+                Console.Write(Word[i]);
+            }
+        }
+        Console.WriteLine("\n");
     }
 }
