@@ -20,8 +20,10 @@ class Word
 
         return letters;
     }
-    public void DisplayWord(List<char> guesses, List<char> Word)
+    public bool DisplayWord(List<char> guesses, List<char> Word)
     {
+        bool complete = false;
+        int letters = 0;
         for (int i = 0; i < Word.Count; i++)
         {
             bool there = false;
@@ -35,8 +37,15 @@ class Word
             if (there)
             {
                 Console.Write(Word[i]);
+                letters += 1;
             }
         }
         Console.WriteLine("\n");
+
+        if (letters == Word.Count)
+        {
+            complete = true;
+        }
+        return complete;
     }
 }

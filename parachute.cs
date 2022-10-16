@@ -35,4 +35,18 @@ class Parachute
             Console.WriteLine(" / \\");
         }
     }
+
+    public bool StillAlive(int fails, bool complete)
+    {
+        bool stillAlive = true;
+        if (fails == 4)
+        {
+            stillAlive = false;
+        }
+        if (complete)
+        {
+            stillAlive = false;
+        }
+        return stillAlive;
+    }
 }
