@@ -38,7 +38,7 @@ class Parachute
         //If four wrong guesses the dead man is displayed
         else
         {
-            Console.WriteLine("  x");
+            Console.WriteLine("  X");
             Console.WriteLine(" /|\\");
             Console.WriteLine(" / \\");
             Console.WriteLine("^^^^^");
