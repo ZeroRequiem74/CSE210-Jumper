@@ -26,14 +26,16 @@ class Game
             complete = words.DisplayWord(guesses, letters);
             //displays the man with the parachute
             parachute.DisplayMan(lines);
-            //asks for the player's guess and adds to the guesses List
-            guesses = player.Guess(guesses);
-            //checks the fail counter
-            fails = player.Fails(turn, fails, letters, guesses);
-            //increases the turn counter 
-            turn = player.Turn(turn);
-            //checks if the parachute man is still alive
+             //checks if the parachute man is still alive
             stillAlive = parachute.StillAlive(fails, complete);
+            if (stillAlive){
+                //asks for the player's guess and adds to the guesses List
+                guesses = player.Guess(guesses);
+                //checks the fail counter
+                fails = player.Fails(turn, fails, letters, guesses);
+                //increases the turn counter 
+                turn = player.Turn(turn);
+            }
         }
     }
 

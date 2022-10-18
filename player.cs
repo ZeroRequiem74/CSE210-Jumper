@@ -3,7 +3,7 @@ class Player
     public List<char> Guess(List<char> guesses)
     {
         //asks player to guess a letter
-        Console.WriteLine("Guess a letter [a-z]: ");
+        Console.Write("Guess a letter [a-z]: ");
         char guess = (Console.ReadLine() ?? "")[0];
 
         //puts guess into the guesses List and returns the List.
