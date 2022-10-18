@@ -4,7 +4,7 @@ class Player
     {
         //asks player to guess a letter
         Console.WriteLine("Guess a letter [a-z]: ");
-        char guess = Console.ReadLine()[0];
+        char guess = (Console.ReadLine() ?? "")[0];
 
         //puts guess into the guesses List and returns the List.
         guesses.Add(guess);
