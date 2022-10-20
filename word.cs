@@ -1,6 +1,6 @@
 class Words
 {
-    public string RandomWord()
+    private string RandomWord()
     {
         //array of words to randomly choose from.
         String[] words = new string[5] {"class", "semester", "computer", "engineering", "science"};
@@ -12,8 +12,9 @@ class Words
         return word;
     }
 
-    public List<char> WordList(string word)
+    public List<char> WordList()
     {
+        string word = RandomWord();
         //new List for letters in the word
         List<char> letters = new List<char>();
 

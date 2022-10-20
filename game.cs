@@ -12,8 +12,7 @@ class Game
         List<char> guesses = new List<char>();
         List<char> letters = new List<char>();
         //gets the random word and makes the letters into a list.
-        var word = words.RandomWord();
-        letters = words.WordList(word);
+        letters = words.WordList();
         //sets the initial values for game
         int turn = 0;
         int fails = 0;
@@ -26,8 +25,9 @@ class Game
             complete = words.DisplayWord(guesses, letters);
             //displays the man with the parachute
             parachute.DisplayMan(lines);
-             //checks if the parachute man is still alive
+            //checks if the parachute man is still alive
             stillAlive = parachute.StillAlive(fails, complete);
+            //asks for guess, checks fails, and increases turns so long as stillAlive is true
             if (stillAlive){
                 //asks for the player's guess and adds to the guesses List
                 guesses = player.Guess(guesses);
